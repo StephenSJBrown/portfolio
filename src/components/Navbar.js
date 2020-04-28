@@ -6,7 +6,7 @@ const Background = styled.div`
 max-width: 100vw;
 background-color: $this;
 height: 48px;
-padding: 36px;
+padding: 0 36px;
 box-sizing: border-box;
 display: flex;
 justify-content: space-between;
@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <Background>
-        <img src={logo}/>
+        <img src={logo} alt="logo"/>
         <Right>
             <Link>about</Link>
             <Link>work</Link>

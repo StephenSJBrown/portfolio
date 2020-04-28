@@ -5,12 +5,18 @@ $background: #F5D1D1;
 
 h1,h2,h3,p, button {
   mix-blend-mode: difference;
-  color: #C4C4C4;
+  color: $tertiary;
+  margin: 0;
+  line-height: 100%;
+  font-style: normal;
+font-weight: normal;
+font-family: Numans;
 }
-
 
 h1 {
   font-size: 8em;
+  text-transform: uppercase;
+  display: inline;
 }
 
 h2 {
@@ -22,17 +28,13 @@ h3, p {
 }
 
 p {
-  margin: 0;
   font-size: 1.5em;
+  line-height: 24px;
+  display: inline;
+  font-family: Raleway;
 }
 
 a {
   font-size: 1.5em;
 }
 
-button {
-  height: 60px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
