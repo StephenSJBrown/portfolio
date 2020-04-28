@@ -4,7 +4,7 @@ import logo from './../images/logo.svg'
 
 const Background = styled.div`
 max-width: 100vw;
-background-color: #F5D1D1;
+background-color: $this;
 height: 48px;
 padding: 36px;
 box-sizing: border-box;
@@ -19,7 +19,6 @@ justify-content: space-between;
 `
 const Link = styled.a`
 margin-left: 60px;
-font-size: 1em;
 &:hover {
 color: red;
 cursor: pointer;

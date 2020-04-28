@@ -1,35 +1,28 @@
-$this: #1F5B30;
-$that: #1E98C9;
-$tertiary: #C4C4C4;
-$background: #F5D1D1;
-
-h1,h2,h3,p, button {
+h1,
+h2,
+h3,
+p,
+button {
   mix-blend-mode: difference;
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
-
-
 h1 {
   font-size: 8em;
 }
-
 h2 {
   font-size: 3em;
 }
-
-h3, p {
+h3,
+p {
   font-size: 2em;
 }
-
 p {
   margin: 0;
   font-size: 1.5em;
 }
-
 a {
   font-size: 1.5em;
 }
-
 button {
   height: 60px;
   background: none;

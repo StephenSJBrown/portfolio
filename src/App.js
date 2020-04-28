@@ -1,18 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-import "./App.css";
+import "./App.scss";
 
 import Navbar from "./components/Navbar";
 
+import abackground from "./images/abackground.png";
+import bbackground from "./images/bbackground.png";
+
 const Title = styled.h1`
-  font-size: 40px;
   margin: 0;
-  color: #C4C4C4;
 `;
 const MainDiv = styled.div`
-  background-color: #1e98c9;
-  background-image: url(), url();
+  background-image: url(${abackground}), url(${bbackground});
+  background-position: left, right;
+  background-size: 50vw 100%, 50vw 100%;
+  background-repeat: no-repeat, no-repeat;
   height: calc(100vh - 48px);
   margin: 0;
 `;
@@ -25,9 +28,9 @@ function App() {
       <Title>Dual // Design</Title>
       <h3>creative digital design and development</h3>
         <p>design tells a story</p>
-        <a>like this</a>
+        <button>like this</button>
         <p>how do you want it told?</p>
-        <a>like that</a>
+        <button>like that</button>
       </MainDiv>
     </>
   );
