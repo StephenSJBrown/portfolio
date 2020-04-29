@@ -2,6 +2,7 @@ $this: #1F5B30;
 $that: #1E98C9;
 $tertiary: #C4C4C4;
 $background: #F5D1D1;
+$text: #2E2E2E;
 
 h1,h2,h3,p, button {
   mix-blend-mode: difference;
@@ -36,5 +37,33 @@ p {
 
 a {
   font-size: 1.5em;
+  font-family: Raleway;
+
+  &:visited {
+    color: $text;
+  }
 }
+
+img {
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+input, textarea {
+  margin-left: 6px;
+  background: none;
+  border: none;
+  border-bottom: $background solid 1px;
+  width: 326px;
+  color: $background;
+  font-family: Raleway;
+  font-size: 1.5em;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+
 

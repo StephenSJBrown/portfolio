@@ -31,4 +31,28 @@ p {
 }
 a {
   font-size: 1.5em;
+  font-family: Raleway;
+}
+a:visited {
+  color: #2e2e2e;
+}
+img {
+  height: auto;
+  width: auto;
+  display: block;
+}
+input,
+textarea {
+  margin-left: 6px;
+  background: none;
+  border: none;
+  border-bottom: #f5d1d1 solid 1px;
+  width: 326px;
+  color: #f5d1d1;
+  font-family: Raleway;
+  font-size: 1.5em;
+}
+input:focus,
+textarea:focus {
+  outline: none;
 }
