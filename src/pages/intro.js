@@ -1,6 +1,10 @@
 import React from "react";
+import {useDispatch} from 'react-redux'
+import { useHistory } from "react-router-dom";
 
 import styled from "styled-components";
+
+import {lighten, darken} from '../actions'
 
 import Button from '../components/Button'
 import ButtonBack from '../components/ButtonBack'
@@ -49,6 +53,10 @@ margin-bottom: 60px;
 `
 
 const Intro = () => {
+
+const dispatch = useDispatch()
+const history = useHistory()
+
   return (
     <>
       <Container>
@@ -57,23 +65,23 @@ const Intro = () => {
           <h1>/ Design</h1>
         </Header>
         <Sub>
-          <h3>creative digital design and development</h3>
+          <h3 class="intro">creative digital design and development</h3>
           <ButtonBack x={93} y={-12} height={48} hunit={"px"} width={480} wunit={"px"} />
         </Sub>
         <div>
-          <p style={{ marginRight: "17px" }}>design tells a story</p>
-          <p style={{ marginLeft: "17px" }}>how do you want it told?</p>
+          <p class="intro" style={{ marginRight: "17px" }}>design tells a story</p>
+          <p class="intro" style={{ marginLeft: "17px" }}>how do you want it told?</p>
         </div>
         <Flex>
           <FlexCentre>
-            <Button>
-              <h3>like this</h3>
+            <Button onClick={() => dispatch(darken(), history.push("/about"))}>
+              <h3 class="intro">like this</h3>
               <ButtonBack x={-54} y={0} />
             </Button>
           </FlexCentre>
           <FlexCentre>
-            <Button>
-              <h3>like that</h3>
+            <Button onClick={() => dispatch(lighten(), history.push("/about"))}>
+              <h3 class="intro">like that</h3>
               <ButtonBack x={49} y={0} />
             </Button>
           </FlexCentre>

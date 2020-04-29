@@ -3,15 +3,20 @@ h2,
 h3,
 p,
 button {
-  mix-blend-mode: difference;
-  color: #c4c4c4;
+  color: #f5d1d1;
   margin: 0;
   line-height: 100%;
   font-style: normal;
   font-weight: normal;
   font-family: Numans;
 }
+.intro {
+  mix-blend-mode: difference;
+  color: #c4c4c4;
+}
 h1 {
+  mix-blend-mode: difference;
+  color: #c4c4c4;
   font-size: 8em;
   text-transform: uppercase;
   display: inline;
@@ -48,6 +53,9 @@ textarea {
   border: none;
   border-bottom: #f5d1d1 solid 1px;
   width: 326px;
+  max-width: 326px;
+  min-width: 326px;
+  max-height: 250px;
   color: #f5d1d1;
   font-family: Raleway;
   font-size: 1.5em;

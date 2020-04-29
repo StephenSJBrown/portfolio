@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
-import styled from "styled-components";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {useSelector} from 'react-redux'
 import "./App.scss";
 
 import Intro from "./pages/intro";
@@ -10,8 +9,14 @@ import Work from "./pages/work";
 import Contact from "./pages/contact";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import { Dynamic } from "./containers/backgrounds";
 
 function App() {
+
+const dark = useSelector(state => state.dark)
+
   return (
     <Router>
       <Navbar />
@@ -29,6 +34,8 @@ function App() {
           <Contact />
         </Route>
       </Switch>
+      <Footer />
+      <Dynamic dark={dark}/>
     </Router>
   );
 }

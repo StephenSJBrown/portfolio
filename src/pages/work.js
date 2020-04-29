@@ -1,4 +1,5 @@
 import React from "react";
+import {useSelector} from 'react-redux'
 
 import styled from "styled-components";
 
@@ -8,6 +9,7 @@ import Button from "../components/Button";
 import Grid from "../containers/grid";
 import Sub from "../containers/sub";
 import Title from '../containers/title'
+import {Dynamic} from '../containers/backgrounds'
 
 import github from "../images/github.png";
 import studioasean from "../images/studioasean.png";
@@ -30,7 +32,11 @@ margin-top: 252px;
 `
 
 const Work = () => {
+
+  const dark = useSelector(state => state.dark)
+
   return (
+    <>
     <Grid>
       <Title>
         <h2>work</h2>
@@ -65,6 +71,7 @@ const Work = () => {
         </div>
       </Flex>
     </Grid>
+      </>
   );
 };
 

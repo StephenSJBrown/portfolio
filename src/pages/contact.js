@@ -1,4 +1,5 @@
 import React from "react";
+import {useSelector} from 'react-redux';
 
 import styled from "styled-components";
 
@@ -11,6 +12,7 @@ import Title from "../containers/title";
 import Sub from "../containers/sub";
 
 import sky from "../images/sky.png";
+import plant from "../images/plant.png";
 
 const Flex = styled.div`
   display: flex;
@@ -21,8 +23,12 @@ const Pic = styled(Sub)`
 margin-top: 216px;
 `
 
-const Contact = () => {
+const Contact = ({a=true}) => {
+
+const dark = useSelector(state => state.dark)
+
   return (
+    <>
     <Grid>
         <Title>
           <h2>contact</h2>
@@ -30,7 +36,7 @@ const Contact = () => {
         </Title>
       <Flex>
         <Pic>
-          <img src={sky} />
+          { dark ? <img src={sky} alt="the sky" /> : <img src={plant} alt="a plant" /> }
           <ButtonBack x={12} y={-12} />
         </Pic>
         <div>
@@ -42,6 +48,7 @@ const Contact = () => {
         </div>
       </Flex>
     </Grid>
+      </>
   );
 };
 
