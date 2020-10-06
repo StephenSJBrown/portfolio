@@ -9,11 +9,12 @@ import ButtonBack from "../components/ButtonBack";
 
 import avatar from "../images/avatar.png";
 
-const About = () => {
-
   const Photo = styled.img`
-    height: 216px;
-    width: 216px;
+    max-height: 216px;
+    min-height: 96px;
+    height: 30vw;
+    max-width: 216px;
+    min-width: 96px;
     margin-right: 24px;
   `;
 
@@ -25,26 +26,34 @@ const About = () => {
   const Right = styled.div`
     display: inline-block;
     position: relative;
-    left: 606px;
+    left: 50vw;
+    @media (max-width: 858px) {
+      left: 6vw;
+    }
     margin-bottom: 48px;
   `;
 
   const Left = styled.div``;
 
   const Text = styled.div`
-    width: 414px;
+    max-width: 414px;
+    width: 100%;
+
     & > * {
       margin-bottom: 12px;
     }
   `;
+
+const About = () => {
+
 
   return (
     <>
       <Grid>
         <Top>
           <Sub>
-            <Photo src={avatar} />
-            <ButtonBack x={-20} y={12} width={90} wunit={"%"} />
+            <Photo src={avatar} alt="my headshot"/>
+            <ButtonBack class="pic" x={-20} y={12} width={90} wunit={"%"} />
           </Sub>
           <Text>
             <Sub>
@@ -70,9 +79,7 @@ const About = () => {
             <Sub>
               <p>
                 HTML. CSS. Javascript. ReactJS. Python. Flask AxureRP. Figma.
-                AdobeXD. Sketch.
-                <br />
-                User Research. User Journeys. User Testing
+                AdobeXD. Sketch. User Research. User Journeys. User Testing
               </p>
               <ButtonBack />
             </Sub>

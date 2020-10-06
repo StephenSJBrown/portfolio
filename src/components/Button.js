@@ -15,6 +15,10 @@ const Button = styled.button`
     width: 120%;
     height: 100%;
   }
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export default Button;

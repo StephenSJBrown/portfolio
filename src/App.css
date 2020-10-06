@@ -21,12 +21,26 @@ h1 {
   text-transform: uppercase;
   display: inline;
 }
+@media only screen and (max-width: 414px) {
+  h1 {
+    font-size: 1.9em;
+  }
+}
 h2 {
   font-size: 3em;
 }
-h3,
-p {
+@media only screen and (max-width: 414px) {
+  h2 {
+    font-size: 1.9em;
+  }
+}
+h3 {
   font-size: 2em;
+}
+@media only screen and (max-width: 414px) {
+  h3 {
+    font-size: 1.6em;
+  }
 }
 p {
   font-size: 1.5em;
@@ -34,9 +48,28 @@ p {
   display: inline;
   font-family: Raleway;
 }
+@media only screen and (max-width: 414px) {
+  p {
+    font-size: 0.83em;
+  }
+}
 a {
   font-size: 1.5em;
   font-family: Raleway;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media only screen and (max-width: 414px) {
+  a {
+    font-size: 0.83em;
+  }
+}
+a.nav {
+  margin-left: 60px;
+}
+a.nav:hover {
+  background-color: #c4c4c4;
+  background-blend-mode: difference;
 }
 a:visited {
   color: #2e2e2e;

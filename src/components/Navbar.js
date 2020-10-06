@@ -12,20 +12,15 @@ box-sizing: border-box;
 display: flex;
 justify-content: space-between;
 align-items: center;
+
+@media (max-width: 414px) {
+    padding: 0 12px;
+}
 `
 
 const Right = styled.div`
 display: flex;
 justify-content: space-between;
-`
-const Linker = styled.a`
-margin-left: 60px;
-&:hover {
-background-color: #C4C4C4;
-background-blend-mode: difference;
-cursor: pointer;
-text-decoration: none;
-}
 `
 
 const Logo = styled.img`
@@ -50,9 +45,9 @@ const Navbar = () => {
         <Background>
         <Link to="/"><Logo src={logo} alt="logo"/></Link>
         <Right>
-            <Link to="/about"><Linker>about</Linker></Link>
-            <Link to="/work"><Linker>work</Linker></Link>
-            <Link to="/contact"><Linker>contact</Linker></Link>
+            <Link to="/about" className='nav'>about</Link>
+            <Link to="/work" className='nav'>work</Link>
+            <Link to="/contact" className='nav'>contact</Link>
         </Right>
         </Background>
     )

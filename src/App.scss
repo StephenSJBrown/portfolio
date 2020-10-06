@@ -1,16 +1,20 @@
-$this: #1F5B30;
-$that: #1E98C9;
-$tertiary: #C4C4C4;
-$background: #F5D1D1;
-$text: #2E2E2E;
+$this: #1f5b30;
+$that: #1e98c9;
+$tertiary: #c4c4c4;
+$background: #f5d1d1;
+$text: #2e2e2e;
 
-h1,h2,h3,p, button {
+h1,
+h2,
+h3,
+p,
+button {
   color: $background;
   margin: 0;
   line-height: 100%;
   font-style: normal;
-font-weight: normal;
-font-family: Numans;
+  font-weight: normal;
+  font-family: Numans;
 }
 
 .intro {
@@ -22,20 +26,33 @@ h1 {
   mix-blend-mode: difference;
   color: $tertiary;
   font-size: 8em;
+  @media only screen and (max-width: 414px) {
+    font-size: 1.9em;
+  }
   text-transform: uppercase;
   display: inline;
 }
 
 h2 {
   font-size: 3em;
+  @media only screen and (max-width: 414px) {
+    font-size: 1.9em;
+  }
 }
 
-h3, p {
+h3 {
   font-size: 2em;
+  @media only screen and (max-width: 414px) {
+    font-size: 1.6em;
+  }
 }
 
 p {
   font-size: 1.5em;
+  @media only screen and (max-width: 414px) {
+    font-size: 0.83em;
+    line-height: 12px;
+  }
   line-height: 24px;
   display: inline;
   font-family: Raleway;
@@ -43,7 +60,21 @@ p {
 
 a {
   font-size: 1.5em;
+  @media only screen and (max-width: 414px) {
+    font-size: 0.83em;
+  }
   font-family: Raleway;
+  cursor: pointer;
+  text-decoration: none;
+
+  &.nav {
+    margin-left: 60px;
+
+    &:hover {
+      background-color: #c4c4c4;
+      background-blend-mode: difference;
+    }
+  }
 
   &:visited {
     color: $text;
@@ -56,7 +87,8 @@ img {
   display: block;
 }
 
-input, textarea {
+input,
+textarea {
   margin-left: 6px;
   background: none;
   border: none;
@@ -68,11 +100,8 @@ input, textarea {
   color: $background;
   font-family: Raleway;
   font-size: 1.5em;
-  
+
   &:focus {
     outline: none;
   }
 }
-
-
-

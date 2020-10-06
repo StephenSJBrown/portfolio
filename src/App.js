@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {useSelector} from 'react-redux'
+import { Switch, Route, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./App.scss";
 
 import Intro from "./pages/intro";
@@ -13,12 +13,16 @@ import Footer from "./components/Footer";
 
 import { Dynamic } from "./containers/backgrounds";
 
-function App() {
 
-const dark = useSelector(state => state.dark)
+function App() {
+  const dark = useSelector((state) => state.dark);
+  
+  const location = useLocation()
+
+  console.log(location.pathname)
 
   return (
-    <Router>
+    <>
       <Navbar />
       <Switch>
         <Route exact path="/">
@@ -34,9 +38,10 @@ const dark = useSelector(state => state.dark)
           <Contact />
         </Route>
       </Switch>
-      <Footer />
-      <Dynamic dark={dark}/>
-    </Router>
+      { location.pathname === "/" ? '' : <Footer /> }
+        
+      <Dynamic dark={dark} />
+    </>
   );
 }
 

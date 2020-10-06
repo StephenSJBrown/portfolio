@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router} from 'react-router-dom'
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -14,7 +15,9 @@ const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && wi
 ReactDOM.render(
   <Provider store={store}>
   <React.StrictMode>
+    <Router>
     <App />
+    </Router>
   </React.StrictMode>
   </Provider>,
   document.getElementById('root')

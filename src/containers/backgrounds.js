@@ -47,24 +47,23 @@ const Right = styled.div`
 `;
 
 const Dynamic = ({dark}) => {
-
-const Back = styled.div`
-background: ${ dark ? `linear-gradient(
-      rgba(31, 91, 48, 0.7),
-      rgba(31, 91, 48, 0.7)
-    ),
-    /* bottom, image */ url(${abackground})` : `linear-gradient(
-      rgba(30, 152, 201, 0.7),
-      rgba(30, 152, 201, 0.7)
-    ),
-   url(${bbackground})`} ;
-   background-size: cover;
-height: calc(100vh - 48px);
-width: 100vw;
-z-index: -3;
-position: absolute;
-top: 48px;
-`
+  const Back = styled.div`
+  background: ${ dark ? `linear-gradient(
+        rgba(31, 91, 48, 0.7),
+        rgba(31, 91, 48, 0.7)
+      ),
+      /* bottom, image */ url(${abackground})` : `linear-gradient(
+        rgba(30, 152, 201, 0.7),
+        rgba(30, 152, 201, 0.7)
+      ),
+     url(${bbackground})`} ;
+     background-size: cover;
+  height: calc(100vh - 48px);
+  width: 100vw;
+  z-index: -3;
+  position: absolute;
+  top: 48px;
+  `
 
 return (
   <Back/>

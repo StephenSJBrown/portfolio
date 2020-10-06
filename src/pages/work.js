@@ -1,5 +1,5 @@
 import React from "react";
-import {useSelector} from 'react-redux'
+import { useHistory } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -8,8 +8,6 @@ import Button from "../components/Button";
 
 import Grid from "../containers/grid";
 import Sub from "../containers/sub";
-import Title from '../containers/title'
-import {Dynamic} from '../containers/backgrounds'
 
 import github from "../images/github.png";
 import studioasean from "../images/studioasean.png";
@@ -22,56 +20,68 @@ const Flex = styled.div`
 `;
 
 const Git = styled(Button)`
-margin-bottom: 48px;
-margin-left: auto;
-margin-right: auto;
-` 
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 const Other = styled.div`
-margin-top: 252px;
+  margin-top: 252px;
+`;
+
+const Title = styled(Sub)`
+margin-bottom: 48px;
+margin-left: 252px;
+
+@media (max-width: 730px) {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
 `
 
 const Work = () => {
-
-  const dark = useSelector(state => state.dark)
+  const history = useHistory();
 
   return (
     <>
-    <Grid>
-      <Title>
-        <h2>work</h2>
-        <ButtonBack y={-12} />
-      </Title>
-      <Git>
-        <h3>view my github</h3>
-        <img src={github} />
-        <ButtonBack x={104} width={139} wunit={"px"} />
-      </Git>
-      <Flex>
-        <div>
-          <Sub>
-            <img src={studioasean} />
-            <ButtonBack x={8} y={6} />
-          </Sub>
-          <h3>studioasean</h3>
-        </div>
-        <Other>
-          <Sub>
-            <img src={other} />
-            <ButtonBack x={-5} y={6} />
-          </Sub>
-          <h3>otherpeopledem</h3>
-        </Other>
-        <div>
-          <Sub>
-            <img src={saturday} />
-            <ButtonBack x={-4} y={-8} />
-          </Sub>
-          <h3>saturday</h3>
-        </div>
-      </Flex>
-    </Grid>
-      </>
+      <Grid>
+        <Title>
+          <h2>work</h2>
+          <ButtonBack y={-12} />
+        </Title>
+        <a href="https://github.com/StephenSJBrown/">
+          <Git>
+            <h3>view my github</h3>
+            <img src={github} alt="github logo" />
+            <ButtonBack x={104} width={139} wunit={"px"} />
+          </Git>
+        </a>
+        <Flex>
+          <div>
+            <Sub>
+              <img src={studioasean} alt="a website" />
+              <ButtonBack x={8} y={6} />
+            </Sub>
+            <h3>studioasean</h3>
+          </div>
+          <Other>
+            <Sub>
+              <img src={other} alt="an app" />
+              <ButtonBack x={-5} y={6} />
+            </Sub>
+            <h3>otherpeopledem</h3>
+          </Other>
+          <div>
+            <Sub>
+              <img src={saturday} alt="a website" />
+              <ButtonBack x={-4} y={-8} />
+            </Sub>
+            <h3>saturday</h3>
+          </div>
+        </Flex>
+      </Grid>
+    </>
   );
 };
 
