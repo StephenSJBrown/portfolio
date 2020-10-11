@@ -12,6 +12,8 @@ import ButtonBack from "../components/ButtonBack";
 import { Left, Right } from "../containers/backgrounds";
 
 const Container = styled.div`
+position: absolute;
+top: 48px;
   height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
@@ -19,12 +21,27 @@ const Container = styled.div`
   padding-top: 48px;
   box-sizing: border-box;
   width: 100vw;
+
+  @media (max-width: 425px) {
+    padding: 48px 36px 0 36px;
+  }
 `;
 
 const Header = styled.div`
   margin-bottom: 48px;
   position: relative;
-  left: 47px;
+  
+  @media (max-width: 425px) {
+    left: 23px;
+  }
+  
+  @media (min-width: 426px) {
+    left: 33px;
+  }
+  
+  @media (min-width: 769px) {
+    left: 47px;
+  }
 `;
 
 const Flex = styled.div`
@@ -70,8 +87,8 @@ const Intro = () => {
             y={-12}
             height={48}
             hunit={"px"}
-            width={480}
-            wunit={"px"}
+            width={60}
+            wunit={"%"}
           />
         </Sub>
         <div>

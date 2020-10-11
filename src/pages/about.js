@@ -27,7 +27,7 @@ import avatar from "../images/avatar.png";
     display: inline-block;
     position: relative;
     left: 50vw;
-    @media (max-width: 858px) {
+    @media (max-width: 768px) {
       left: 6vw;
     }
     margin-bottom: 48px;
@@ -38,6 +38,10 @@ import avatar from "../images/avatar.png";
   const Text = styled.div`
     max-width: 414px;
     width: 100%;
+
+    @media (max-width: 425px) {
+      max-width: 80vw;
+    }
 
     & > * {
       margin-bottom: 12px;
@@ -53,7 +57,6 @@ const About = () => {
         <Top>
           <Sub>
             <Photo src={avatar} alt="my headshot"/>
-            <ButtonBack class="pic" x={-20} y={12} width={90} wunit={"%"} />
           </Sub>
           <Text>
             <Sub>
@@ -93,7 +96,7 @@ const About = () => {
             </Sub>
             <Sub>
               <p>
-                producing electronic rnb. guessing people’s names. urban
+                <a id="soundcloud" href="https://soundcloud.com/powehi" target="_blank">producing electronic rnb.</a> guessing people’s names. open style
                 choreography. buying too much cinema popcorn. cycling. giving
                 complements. travel. msg. reminiscing on a breif modelling
                 career.

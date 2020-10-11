@@ -24,6 +24,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Dynamic dark={dark} />
       <Switch>
         <Route exact path="/">
           <Intro />
@@ -38,9 +39,8 @@ function App() {
           <Contact />
         </Route>
       </Switch>
-      { location.pathname === "/" ? '' : <Footer /> }
-        
-      <Dynamic dark={dark} />
+      { location.pathname === "/" ? '' : <Footer /> }  
+      
     </>
   );
 }

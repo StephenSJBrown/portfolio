@@ -25,9 +25,16 @@ button {
 h1 {
   mix-blend-mode: difference;
   color: $tertiary;
-  font-size: 8em;
-  @media only screen and (max-width: 414px) {
+  @media (max-width: 425px) {
     font-size: 1.9em;
+  }
+  
+  @media (min-width: 426px) {
+    font-size: 3.9em;
+  }
+  
+  @media (min-width: 769px) {
+    font-size: 8em;
   }
   text-transform: uppercase;
   display: inline;
@@ -35,21 +42,21 @@ h1 {
 
 h2 {
   font-size: 3em;
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 425px) {
     font-size: 1.9em;
   }
 }
 
 h3 {
   font-size: 2em;
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 425px) {
     font-size: 1.6em;
   }
 }
 
 p {
   font-size: 1.5em;
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 425px) {
     font-size: 0.83em;
     line-height: 12px;
   }
@@ -60,7 +67,7 @@ p {
 
 a {
   font-size: 1.5em;
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 425px) {
     font-size: 0.83em;
   }
   font-family: Raleway;
@@ -69,6 +76,10 @@ a {
 
   &.nav {
     margin-left: 60px;
+
+    @media (max-width: 425px) {
+      margin-left: 30px;
+    }
 
     &:hover {
       background-color: #c4c4c4;
@@ -103,5 +114,25 @@ textarea {
 
   &:focus {
     outline: none;
+  }
+}
+
+#soundcloud {
+  font-size: 1.1em;
+  @media only screen and (max-width: 425px) {
+    font-size: 1.1em;
+    line-height: 12px;
+  }
+  line-height: 24px;
+  display: inline;
+  font-family: Raleway;
+
+  &:visited {
+    color: $background;
+  }
+
+  &:hover {
+  background-color: #c4c4c4;
+  background-blend-mode: difference;
   }
 }

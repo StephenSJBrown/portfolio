@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 import styled from "styled-components";
 
 import ButtonBack from "../components/ButtonBack";
 import Button from "../components/Button";
-import Form from "../components/Form";
 
 import Grid from "../containers/grid";
 import Title from "../containers/title";
@@ -20,6 +19,7 @@ const Flex = styled.div`
   flex-direction: column;
   max-width: 50vw;
   margin-left: 50vw;
+  min-width: 200px;
 
   &:first-child {
     margin-bottom: 22px;
@@ -28,16 +28,38 @@ const Flex = styled.div`
   * {
     margin-bottom: 12px;
   }
+
+  @media (max-width: 425px) {
+    margin-left: 0px;
+    min-width: calc(100vw - 50px);
+  }
 `;
 
 const Pic = styled(Sub)`
-  position: absolute;
+  position: relative;
   bottom: 76px;
-  left: 16px;
+  left: 76px;
+  width: 30vw;
   min-width: 96px;
   min-height: 96px;
   max-height: 246px;
   max-width: 246px;
+
+  @media (max-width: 425px) {
+    bottom: -14vh;
+  }
+
+  @media (min-width: 1441px) {
+    left: 15vw;
+  }
+
+  img {
+    width: 30vw;
+    min-width: 96px;
+    min-height: 96px;
+    max-height: 246px;
+    max-width: 246px;
+  }
 `;
 
 const Img = styled.img`
@@ -45,20 +67,23 @@ const Img = styled.img`
   min-height: 96px;
   max-height: 246px;
   max-width: 246px;
-  
-`
+`;
 
 const Blurb = styled.div`
   background: #2e2e2e;
   padding: 6px;
-  width: 20vw;
+  width: 100%;
   max-width: 342px;
+
+  @media (max-width: 425px) {
+    width: 60vw;
+  }
 `;
 
 const Contact = () => {
   const dark = useSelector((state) => state.dark);
 
-  const [hologram, setHologram] = useState(false)
+  const [hologram, setHologram] = useState(false);
 
   return (
     <>
@@ -68,38 +93,40 @@ const Contact = () => {
           <ButtonBack x={-8} y={12} />
         </Title>
         <Flex>
-            <Blurb>
-              <p>
-                hey i hope you enjoyed your peruse through my website. if you’d
-                like to contact me, find some options below.
-              </p>
-            </Blurb>
-            <a href="mailto:stephen.sjbrown@gmail.com">
-              <Button>
-                <h3>send an email</h3>
-                <ButtonBack x={-10} width={71} wunit={"px"} />
-              </Button>
-            </a>
-            <a href="https://www.linkedin.com/in/stephensjbrown/">
-              <Button>
-                <h3>hit up my linkedn</h3>
-                <ButtonBack x={-10} width={71} wunit={"px"} />
-              </Button>
-            </a>
-            <Button onClick={()=>setHologram(true)}>
-              <h3>transmit hologram</h3>
-              <ButtonBack x={-10} width={71} wunit={"px"} />
+          <Blurb>
+            <p>
+              hey i hope you enjoyed your peruse through my website. if you’d
+              like to contact me, find some options below.
+            </p>
+          </Blurb>
+          <a href="mailto:stephen.sjbrown@gmail.com">
+            <Button>
+              <h3>send an email</h3>
+              <ButtonBack x={-10} width={50} wunit={"%"} />
             </Button>
-            {hologram? <p>available in 3020 :)</p> : <></>}
+          </a>
+          <a href="https://www.linkedin.com/in/stephensjbrown/" target="_blank">
+            <Button>
+              <h3>hit up my linkedin</h3>
+              <ButtonBack x={-10} width={50} wunit={"%"} />
+            </Button>
+          </a>
+          <a>
+            <Button onClick={() => setHologram(!hologram)}>
+              <h3>transmit hologram</h3>
+              <ButtonBack x={-10} width={50} wunit={"%"} />
+            </Button>
+          </a>
+          {hologram ? <p>available in 3020 :)</p> : <></>}
         </Flex>
-          <Pic>
-            {dark ? (
-              <img src={sky} alt="the sky" />
-            ) : (
-              <img src={plant} alt="a plant" />
-            )}
-            <ButtonBack x={12} y={-12} />
-          </Pic>
+        <Pic>
+          {dark ? (
+            <img src={sky} alt="the sky" />
+          ) : (
+            <img src={plant} alt="a plant" />
+          )}
+          <ButtonBack x={12} y={-12} />
+        </Pic>
       </Grid>
     </>
   );

@@ -61,7 +61,7 @@ const Dynamic = ({dark}) => {
   height: calc(100vh - 48px);
   width: 100vw;
   z-index: -3;
-  position: absolute;
+  position: fixed;
   top: 48px;
   `
 

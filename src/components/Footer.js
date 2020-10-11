@@ -9,9 +9,14 @@ import logo_light from "../images/logo_light.svg";
 import logo_dark from "../images/logo_dark.svg";
 
 const Changer = styled.img`
-  position: absolute;
+  position: fixed;
   bottom: 48px;
   right: 48px;
+
+  @media (max-width: 425px) {
+    bottom: 24px;
+    right: 24px;
+  }
   cursor: pointer;
   transition-duration: 0.2s;
 
