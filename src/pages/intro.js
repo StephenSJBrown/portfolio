@@ -81,7 +81,7 @@ const Intro = () => {
           <h1>/ Design</h1>
         </Header>
         <Sub>
-          <h3 class="intro">creative digital design and development</h3>
+          <h3 className="intro">creative digital design and development</h3>
           <ButtonBack
             x={93}
             y={-12}
@@ -92,18 +92,18 @@ const Intro = () => {
           />
         </Sub>
         <div>
-          <p class="intro" style={{ marginRight: "17px" }}>
+          <p className="intro" style={{ marginRight: "17px" }}>
             design tells a story
           </p>
-          <p class="intro" style={{ marginLeft: "17px" }}>
+          <p className="intro" style={{ marginLeft: "17px" }}>
             how do you want it told?
           </p>
         </div>
         <Flex>
           <FlexCentre>
             <Button onClick={() => dispatch(darken(), history.push("/about"))}>
-              <h3 class="intro">like this</h3>
-              <ButtonBack x={-54} y={0} />
+              <h3 className="intro">like this</h3>
+              <ButtonBack x={-16} y={0} />
             </Button>
           </FlexCentre>
           <FlexCentre>

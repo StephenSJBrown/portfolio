@@ -36,7 +36,7 @@ const Flex = styled.div`
 `;
 
 const Pic = styled(Sub)`
-  position: relative;
+  position: absolute;
   bottom: 76px;
   left: 76px;
   width: 30vw;
@@ -60,13 +60,6 @@ const Pic = styled(Sub)`
     max-height: 246px;
     max-width: 246px;
   }
-`;
-
-const Img = styled.img`
-  min-width: 96px;
-  min-height: 96px;
-  max-height: 246px;
-  max-width: 246px;
 `;
 
 const Blurb = styled.div`
@@ -105,19 +98,19 @@ const Contact = () => {
               <ButtonBack x={-10} width={50} wunit={"%"} />
             </Button>
           </a>
-          <a href="https://www.linkedin.com/in/stephensjbrown/" target="_blank">
+          <a href="https://www.linkedin.com/in/stephensjbrown/" target="_blank" rel="noopener noreferrer">
             <Button>
               <h3>hit up my linkedin</h3>
               <ButtonBack x={-10} width={50} wunit={"%"} />
             </Button>
           </a>
-          <a>
+          <div>
             <Button onClick={() => setHologram(!hologram)}>
               <h3>transmit hologram</h3>
               <ButtonBack x={-10} width={50} wunit={"%"} />
             </Button>
-          </a>
           {hologram ? <p>available in 3020 :)</p> : <></>}
+          </div>
         </Flex>
         <Pic>
           {dark ? (

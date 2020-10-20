@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import {Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -10,9 +10,9 @@ import Grid from "../containers/grid";
 import Sub from "../containers/sub";
 
 import github from "../images/github.png";
-import studioasean from "../images/studioasean.png";
 import other from "../images/other.png";
-import saturday from "../images/saturday.png";
+import eyescan from '../images/eyescan.png'
+import monstera from '../images/monstera.png'
 
 const Flex = styled.div`
   display: flex;
@@ -65,8 +65,14 @@ margin-left: 252px;
 }
 `
 
+const Img = styled.img`
+max-height: 240px;
+max-width: 240px;
+width: auto;
+object-fit: contain;
+`
+
 const Work = () => {
-  const history = useHistory();
 
   return (
     <>
@@ -75,7 +81,7 @@ const Work = () => {
           <h2>work</h2>
           <ButtonBack y={-12} />
         </Title>
-        <a href="https://github.com/StephenSJBrown/" target="_blank">
+        <a href="https://github.com/StephenSJBrown/" target="_blank" rel="noopener noreferrer">
           <Git>
             <h3>view my github</h3>
             <img src={github} alt="github logo" />
@@ -83,27 +89,30 @@ const Work = () => {
           </Git>
         </a>
         <Flex>
-          <div>
+          <Link to="/work/eyescan">
             <Sub>
-              <img src={studioasean} alt="a website" />
+              <Img src={eyescan} alt="a website" />
               <ButtonBack x={8} y={6} />
             </Sub>
             <h3>eyescan</h3>
-          </div>
+            <p>design + development</p>
+          </Link>
           <Other>
             <Sub>
-              <img src={other} alt="an app" />
+              <Img src={other} alt="an app" />
               <ButtonBack x={-5} y={6} />
             </Sub>
-            <h3>uk university</h3>
+            <h3>other ting</h3>
+            <p>ux design</p>
           </Other>
-          <div>
+          <Link to="/work/monstera">
             <Sub>
-              <img src={saturday} alt="a website" />
+              <Img src={monstera} alt="a website" />
               <ButtonBack x={-4} y={-8} />
             </Sub>
             <h3>monsterawear</h3>
-          </div>
+            <p>design + development (in progress)</p>
+          </Link>
         </Flex>
       </Grid>
     </>

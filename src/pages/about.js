@@ -6,8 +6,11 @@ import Grid from "../containers/grid";
 import Sub from "../containers/sub";
 
 import ButtonBack from "../components/ButtonBack";
+import Button from '../components/Button'
 
-import avatar from "../images/avatar.png";
+import avatar from "../images/avatar.jpeg";
+
+import CV from '../docs/CV.pdf'
 
   const Photo = styled.img`
     max-height: 216px;
@@ -16,11 +19,12 @@ import avatar from "../images/avatar.png";
     max-width: 216px;
     min-width: 96px;
     margin-right: 24px;
+    object-fit: contain;
   `;
 
   const Top = styled.div`
     display: flex;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   `;
 
   const Right = styled.div`
@@ -31,6 +35,7 @@ import avatar from "../images/avatar.png";
       left: 6vw;
     }
     margin-bottom: 48px;
+    margin-top: 48px;
   `;
 
   const Left = styled.div``;
@@ -73,6 +78,12 @@ const About = () => {
             </Sub>
           </Text>
         </Top>
+        <a href={CV} target="_blank" rel="noopener noreferrer">
+          <Button >
+            <h3>view CV</h3>
+          <ButtonBack x={40} width={50} wunit="%" />
+          </Button>
+          </a>
         <Right>
           <Text>
             <Sub>
@@ -96,7 +107,7 @@ const About = () => {
             </Sub>
             <Sub>
               <p>
-                <a id="soundcloud" href="https://soundcloud.com/powehi" target="_blank">producing electronic rnb.</a> guessing people’s names. open style
+                <a id="soundcloud" href="https://soundcloud.com/powehi" target="_blank" rel="noopener noreferrer">music production.</a> guessing people’s names. open style
                 choreography. buying too much cinema popcorn. cycling. giving
                 complements. travel. msg. reminiscing on a breif modelling
                 career.

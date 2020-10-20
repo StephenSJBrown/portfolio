@@ -7,6 +7,8 @@ import Intro from "./pages/intro";
 import About from "./pages/about";
 import Work from "./pages/work";
 import Contact from "./pages/contact";
+import Eyescan from "./pages/eyescan"
+import Monstera from "./pages/monstera"
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -31,6 +33,12 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/work/eyescan">
+          <Eyescan/>
+        </Route>
+        <Route path="/work/monstera">
+          <Monstera />
         </Route>
         <Route path="/work">
           <Work />
