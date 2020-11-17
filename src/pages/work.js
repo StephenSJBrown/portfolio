@@ -97,14 +97,14 @@ const Work = () => {
             <h3>eyescan</h3>
             <p>design + development</p>
           </Link>
-          <Other>
+          {/* <Other>
             <Sub>
               <Img src={other} alt="an app" />
               <ButtonBack x={-5} y={6} />
             </Sub>
             <h3>other ting</h3>
             <p>ux design</p>
-          </Other>
+          </Other> */}
           <Link to="/work/monstera">
             <Sub>
               <Img src={monstera} alt="a website" />
