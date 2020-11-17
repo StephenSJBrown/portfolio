@@ -109,7 +109,7 @@ const About = () => {
               <p>
                 <a id="soundcloud" href="https://soundcloud.com/powehi" target="_blank" rel="noopener noreferrer">music production.</a> guessing people’s names. open style
                 choreography. buying too much cinema popcorn. cycling. giving
-                complements. travel. msg. reminiscing on a breif modelling
+                compliments. travel. msg. reminiscing on a brief modelling
                 career.
               </p>
               <ButtonBack />
