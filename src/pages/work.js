@@ -10,7 +10,7 @@ import Grid from "../containers/grid";
 import Sub from "../containers/sub";
 
 import github from "../images/github.png";
-import other from "../images/other.png";
+// import other from "../images/other.png";
 import eyescan from '../images/eyescan.png'
 import monstera from '../images/monstera.png'
 
@@ -44,15 +44,15 @@ const Git = styled(Button)`
   }
 `;
 
-const Other = styled.div`
-  margin-top: 30vh;
+// const Other = styled.div`
+//   margin-top: 30vh;
 
-  @media (max-width: 425px) {
-    margin-top: 0;
-    justify-self: flex-end;
-    margin-left: auto;
-  }
-`;
+//   @media (max-width: 425px) {
+//     margin-top: 0;
+//     justify-self: flex-end;
+//     margin-left: auto;
+//   }
+// `;
 
 const Title = styled(Sub)`
 margin-bottom: 48px;
