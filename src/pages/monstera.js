@@ -7,7 +7,7 @@ import Sub from "../containers/sub";
 
 import ButtonBack from "../components/ButtonBack";
 
-import eyescan from "../images/eyescanvid.mov";
+import monstera from "../images/Monstera.mov";
 
 const Flex = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ const Monstera = () => {
         </Sub>
       </FlexRow>
       <Flex>
-        <Vid src={eyescan} autoPlay loop/>
+        <Vid src={monstera} autoPlay loop/>
         <div>
           <Sub>
             <h3>about the project</h3>

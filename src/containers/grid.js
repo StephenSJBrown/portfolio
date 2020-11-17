@@ -6,7 +6,7 @@ position: relative;
 top: 48px;
 
 width: 100vw;
-padding: 36px 78px 0 78px;
+padding: 36px 78px 36px 78px;
 box-sizing: border-box;
 margin: 0 auto;
 
