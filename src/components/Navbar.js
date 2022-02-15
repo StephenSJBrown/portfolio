@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import styled from "styled-components";
 import logo from "./../images/logo.svg";
 
 const Background = styled.div`
-position: fixed;
+  position: fixed;
   width: 100vw;
   background-color: #f5d1d1;
   height: 48px;
@@ -12,11 +13,16 @@ position: fixed;
   box-sizing: border-box;
   padding-top: 6px;
   z-index: 1;
-
+  display: flex;
+justify-content: flex-start;
 
   @media (max-width: 425px) {
     padding: 6px 12px;
   }
+  @media (min-width: 1024px) {
+    height: 96px;
+  }
+
 `;
 
 const Right = styled.div`
@@ -45,34 +51,35 @@ const Logo = styled.img`
 `;
 
 const Main = styled.div`
-
-  @media (min-width: 1441px) {
-      max-width: 75vw;
-  }
+  max-width: 900px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
+  @media (min-width: 1024px) {
+  max-width: 65vw;
+}
 `;
 
 const Navbar = () => {
   return (
     <Background>
       <Main>
-        <Link to="/">
+        <a href="/">
           <Logo src={logo} alt="logo" />
-        </Link>
-        <Right>
-          <Link to="/about" className="nav">
+        </a>
+        {/* <Right>
+          <Link to="/#about" className="nav">
             about
           </Link>
-          <Link to="/work" className="nav">
+          <Link to="/#work" className="nav">
             work
           </Link>
-          <Link to="/contact" className="nav">
+          <Link to="/#contact" className="nav">
             contact
           </Link>
-        </Right>
+        </Right> */}
       </Main>
     </Background>
   );

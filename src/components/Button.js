@@ -1,23 +1,34 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  height: 60px;
+  height: 56px;
   position: relative;
   display: flex;
   align-items: center;
   border: none;
   cursor: pointer;
-  background: none;
+  background: #f5d1d1;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
 
-  &:hover > div {
-    left: -10%;
-    top: 0;
-    width: 120%;
-    height: 100%;
+  @media only screen and (max-width: 768px) {
+    height: 48px;
+    img {
+    height: 24px;
+    width: 24px;
+    margin-left: 18px;
+  }
   }
 
   &:focus {
     outline: none;
+  }
+
+  img {
+    height: 24px;
+    width: 24px;
+    margin-left: 8px;
   }
 `;
 

@@ -1,41 +1,64 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 
 import styled from "styled-components";
 
-import { toggle } from "../actions";
+import email from "../images/email.svg";
+import github from "../images/github.svg";
+import linkedin from "../images/linkedin.svg";
 
-import logo_light from "../images/logo_light.svg";
-import logo_dark from "../images/logo_dark.svg";
+const Foot = styled.div`
+  position: relative;
+  top: 96px;
+  color: #2e2e2e;
+  width: 100vw;
+  padding: 32px;
+  box-sizing: border-box;
+  background: #f5d1d1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
-const Changer = styled.img`
-  position: fixed;
-  bottom: 48px;
-  right: 48px;
+const Icons = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 14px;
 
-  @media (max-width: 425px) {
-    bottom: 24px;
-    right: 24px;
-  }
-  cursor: pointer;
-  transition-duration: 0.2s;
+  img {
+    height: 24px;
+    width: 24px;
+    margin-right: 36px;
 
-  &:hover {
-    transform: scale(1.1, 1.1);
+    &::last-of-type {
+      margin-right: 0;
+    }
   }
 `;
 
-const Footer = () => {
-  const dispatch = useDispatch();
-  const dark = useSelector((state) => state.dark);
+const Email = styled.p`
+margin-top: -18px;
+margin-bottom: 18px;
+color: #2e2e2e;
+`
 
+const Footer = () => {
   return (
-    <>
-      <Changer
-        src={dark ? logo_dark : logo_light}
-        onClick={() => dispatch(toggle())}
-      />
-    </>
+    <Foot>
+      <h3 className="footer">stephen sj brown</h3>
+      <Email >stephen.sjbrown@gmail.com</Email>
+      <Icons>
+        <a href="mailto:stephen.sjbrown@gmail.com">
+          <img src={email} />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/stephensjbrown/">
+          <img src={linkedin} />
+        </a>
+        <a target="_blank" href="https://github.com/StephenSJBrown/">
+          <img src={github} />
+        </a>
+      </Icons>
+    </Foot>
   );
 };
 
